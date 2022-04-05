@@ -1,0 +1,48 @@
+<div>
+    <div class="modal-header">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="align-center">Edit Hackathon: </h1>
+        </div>
+        <div class="col-md-6">
+          <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+      </div>
+  
+    </div>
+    <form [formGroup]='editForm' (ngSubmit)="editHackathon()">
+      <div class="modal-boy">
+        <div class="container">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="post_title" placeholder="Title">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+  
+              <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="post_desc" placeholder="Description">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="tags" placeholder="Tags">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" [disabled]="!editForm.valid" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+  

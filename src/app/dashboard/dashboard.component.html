@@ -1,0 +1,41 @@
+<div class="container">
+    <h1 class="title">Upcoming Hackathon</h1>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <button class="btn btn-primary" (click)="addHacakton()">Add New Hackathon</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+        <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th scope="col" [appSort]="hackathonData" data-order="desc" data-name="createdAt" data-type="date">Date</th>
+                <th scope="col" [appSort]="hackathonData" data-order="desc" data-name="vote_count">Votes</th>
+                <th>Manage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let hackPost of hackathonData">
+                <td>{{hackPost.post_title}}</td>
+                <td>{{hackPost.post_desc}}</td>
+                <td>{{hackPost.createdAt}}</td>
+                <td><span (click)="updateVote(hackPost, true)" class="material-icons">thumb_up</span>
+                    <div>{{hackPost.vote_count}}</div>
+                </td>
+                <td>
+                    <i class="material-icons" (click)="deleteRow(hackPost)">delete</i>
+                    <i class="material-icons" (click)="editRow(hackPost)">edit</i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          
+    
+</div>

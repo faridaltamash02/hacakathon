@@ -1,0 +1,11 @@
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    box-shadow: 0 0 40px 4px #111118;
+}
+.align-center{
+    text-align: center;
+}
