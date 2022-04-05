@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.css';
+
+.modal-dialog{transform: translate(0,10%) !important;}
+.modal-backdrop
+{
+    opacity:0.5 !important;
+    z-index: 100 !important;
+}
+.d-block.modal.fade{
+    opacity: 1 !important;
+}
